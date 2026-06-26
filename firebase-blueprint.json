@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "AttendanceRecord": {
+      "title": "Attendance Record",
+      "description": "A backup record of student or teacher attendance",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the record" },
+        "timestamp": { "type": "string", "format": "date-time", "description": "ISO timestamp of the record" },
+        "type": { "type": "string", "enum": ["murid", "guru"], "description": "Type of person" },
+        "data": { "type": "object", "description": "The attendance details" }
+      },
+      "required": ["id", "timestamp", "type", "data"]
+    },
+    "ActivityLog": {
+      "title": "Activity Log",
+      "description": "A log of user or system actions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Unique ID (timestamp)" },
+        "timestamp": { "type": "string", "format": "date-time", "description": "ISO timestamp" },
+        "user": { "type": "string", "description": "User who performed the action" },
+        "action": { "type": "string", "description": "Short description of the action" },
+        "detail": { "type": "string", "description": "Detailed log message" }
+      },
+      "required": ["id", "timestamp", "user", "action", "detail"]
+    }
+  },
+  "firestore": {
+    "records": {
+      "schema": "AttendanceRecord",
+      "description": "Collection of attendance backup records"
+    },
+    "activity_logs": {
+      "schema": "ActivityLog",
+      "description": "Collection of system activity logs"
+    }
+  }
+}

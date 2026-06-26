@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Seamless Animations for UX */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scan {
+  from {
+    top: 5%;
+  }
+  to {
+    top: 95%;
+  }
+}
+
+@keyframes panCamera {
+  0% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-2%, 2%) scale(1.02); }
+  50% { transform: translate(2%, -1%) scale(1.05); }
+  75% { transform: translate(-1%, -2%) scale(1.01); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scan-line {
+  animation: scan 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+}
+
+.animate-pan-camera {
+  animation: panCamera 10s ease-in-out infinite;
+}
+
+/* Custom Scrollbar for Spreadsheet Table Visual */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}
+
+/* Global Dark Mode Override Patterns */
+.dark .bg-white {
+  background-color: #0f172a !important;
+  color: #f8fafc;
+}
+.dark .bg-slate-50, .dark .bg-slate-100 {
+  background-color: #1e293b !important;
+  color: #f1f5f9;
+}
+.dark .text-slate-900, .dark .text-slate-800, .dark .text-slate-700 {
+  color: #f8fafc !important;
+}
+.dark .text-slate-600, .dark .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+.dark .border-slate-100, .dark .border-slate-200, .dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+.dark .shadow-sm, .dark .shadow-md, .dark .shadow-xl {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+}
+.dark .bg-emerald-50, .dark .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+}
+.dark .text-emerald-700, .dark .text-emerald-800 {
+  color: #34d399 !important;
+}
+.dark .bg-amber-50, .dark .bg-amber-100 {
+  background-color: rgba(245, 158, 11, 0.1) !important;
+}
+.dark .text-amber-700, .dark .text-amber-800 {
+  color: #fbbf24 !important;
+}
+.dark .bg-rose-50, .dark .bg-rose-100 {
+  background-color: rgba(225, 29, 72, 0.1) !important;
+}
+.dark .text-rose-700, .dark .text-rose-800 {
+  color: #fb7185 !important;
+}
+.dark table {
+  border-color: #334155 !important;
+}
+.dark th {
+  background-color: #0f172a !important;
+  color: #cbd5e1 !important;
+  border-bottom-color: #334155 !important;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.dark td {
+  border-bottom-color: #334155 !important;
+  color: #f1f5f9 !important;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.dark input, .dark textarea, .dark select {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+.dark input::placeholder, .dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  overflow-x: hidden;
+  @apply dark:bg-slate-950 dark:text-slate-200 transition-colors duration-200;
+}
+
+/* Beautiful Interactive Layout */
+.bento-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: 380px 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bento-grid {
+    grid-template-columns: 420px 1fr;
+  }
+}

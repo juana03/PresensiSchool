@@ -1,0 +1,6 @@
+{
+  "name": "Absensi Sekolah Real-time",
+  "description": "Sistem Informasi Absensi Sekolah Real-time untuk Murid dan Guru menggunakan Google Apps Script dan Google Sheets.",
+  "requestFramePermissions": ["geolocation", "camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

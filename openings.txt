@@ -1,0 +1,88 @@
+394:    <div className="space-y-6 animate-fadeIn relative">
+397:        <div className="space-y-3 mb-6">
+429:              <div
+433:                <div
+440:                <div className="flex-1">
+476:                  <div
+504:      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
+505:        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+506:        <div className="relative z-10">
+507:          <div className="flex items-center gap-3 mb-2">
+508:            <div className="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600">
+521:        <div className="relative z-10 flex flex-wrap gap-2 items-center">
+522:          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-2.5 flex items-center gap-3.5 shadow-sm">
+523:            <div className="flex flex-col">
+531:            <div className="flex items-center gap-1.5">
+568:      <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+617:        <div className="space-y-6">
+619:          <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 rounded-2xl p-6 text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-4 animate-fadeIn relative overflow-hidden">
+620:            <div className="absolute top-0 right-0 opacity-10 pointer-events-none transform translate-x-1/4 -translate-y-1/4">
+623:            <div className="flex items-center gap-4 relative z-10 w-full md:w-auto">
+624:              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm shrink-0">
+627:              <div>
+637:            <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto relative z-10">
+639:                <div className="text-[10px] text-indigo-200 font-bold tracking-wider uppercase text-center sm:text-right">
+664:          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fadeIn">
+665:            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+666:              <div className="flex items-center justify-between mb-4">
+672:              <div className="space-y-4">
+673:                <div className="grid grid-cols-3 gap-3">
+674:                  <div className="bg-emerald-50 rounded-xl p-3 border border-emerald-100 flex flex-col justify-center items-center text-center">
+682:                  <div className="bg-amber-50 rounded-xl p-3 border border-amber-100 flex flex-col justify-center items-center text-center">
+690:                  <div className="bg-blue-50 rounded-xl p-3 border border-blue-100 flex flex-col justify-center items-center text-center">
+699:                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+700:                  <div className="flex justify-between items-center mb-3">
+704:                    <div className="flex items-center gap-3">
+719:                  <div className="grid grid-cols-2 gap-3">
+720:                    <div>
+734:                    <div>
+768:                <div className="space-y-2 max-h-[450px] overflow-y-auto pr-1">
+797:                          <div className="flex flex-col sm:flex-row justify-between sm:items-center p-3 gap-2">
+798:                            <div>
+799:                              <div className="flex items-center gap-2">
+821:                              <div className="flex items-center gap-2 mt-0.5">
+842:                            <div className="flex items-center justify-between sm:justify-end gap-2">
+921:                                <div className="mx-3 mb-3 px-3 py-2 bg-slate-50 border border-slate-100 rounded-lg flex flex-col gap-1.5">
+926:                                    <div className="flex items-center gap-2 mt-1 border-t border-slate-100 pt-1.5">
+947:                            <div className="border-t border-slate-100 bg-slate-50 p-2">
+948:                              <div className="h-[150px] rounded-lg overflow-hidden border border-slate-200 shadow-inner relative z-0">
+969:                              <div className="mt-1.5 flex justify-between items-center px-1">
+990:              <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+995:              <div className="space-y-4">
+996:                <div className="flex justify-between items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+1004:                <div className="space-y-2">
+1008:                      <div
+1012:                        <div>
+1074:        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fadeIn">
+1075:          <div className="lg:col-span-1">
+1083:              <div className="space-y-4">
+1084:                <div>
+1088:                  <div className="grid grid-cols-3 gap-2">
+1112:                <div>
+1135:          <div className="lg:col-span-2 space-y-4">
+1137:              <div
+1141:                <div
+1158:                <div className="flex-1">
+1159:                  <div className="flex items-center gap-2 mb-1">
+1186:              <div className="text-center p-12 bg-white border border-slate-200 rounded-2xl border-dashed">
+1198:        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fadeIn">
+1199:          <div className="lg:col-span-1">
+1207:              <div className="space-y-4">
+1208:                <div>
+1220:                <div>
+1232:                <div>
+1256:          <div className="lg:col-span-2 space-y-4">
+1258:              <div
+1262:                <div className="flex items-start justify-between">
+1263:                  <div className="flex gap-4">
+1264:                    <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center border border-slate-200 shrink-0">
+1267:                    <div>
+1280:                      <div className="flex items-center gap-4 text-xs font-mono text-slate-500">
+1281:                        <div className="flex items-center gap-1.5">
+1285:                          <div className="flex items-center gap-1.5 text-emerald-600">
+1309:              <div className="text-center p-12 bg-white border border-slate-200 rounded-2xl border-dashed">
+1320:        <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200">
+1321:          <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+1322:            <div className="p-2.5 bg-rose-50 text-rose-600 rounded-xl">
+1325:            <div>
+1335:          <div className="overflow-x-auto">
