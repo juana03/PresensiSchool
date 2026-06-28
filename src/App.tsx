@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, memo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   School, 
@@ -145,7 +145,7 @@ export default function App() {
     return saved ? JSON.parse(saved) : [];
   });
 
-  const addLog = (action: string, detail: string, user?: string) => {
+  const addLog = useCallback((action: string, detail: string, user?: string) => {
     const newLog = {
       id: Date.now(),
       timestamp: new Date().toISOString(),
@@ -153,13 +153,15 @@ export default function App() {
       action,
       detail
     };
-    const updated = [newLog, ...activityLogs].slice(0, 50);
-    setActivityLogs(updated);
-    localStorage.setItem('absensi_activity_logs', JSON.stringify(updated));
+    setActivityLogs(prev => {
+      const updated = [newLog, ...prev].slice(0, 50);
+      localStorage.setItem('absensi_activity_logs', JSON.stringify(updated));
+      return updated;
+    });
     
-    // Auto-backup to Firestore
+    // Auto-backup to Firestore (async, non-blocking)
     addActivityLogToFirestore(newLog).catch(e => console.warn('Firestore Log Backup Failed:', e));
-  };
+  }, [currentUser?.displayName]);
 
   // Tour State
   const [runTour, setRunTour] = useState(false);
@@ -665,8 +667,8 @@ export default function App() {
     setRecords([]);
   };
 
-  // Update localStorage when records change
-  const saveRecords = (newRecords: SimulatedRecord[]) => {
+  // Memoized saveRecords to prevent unnecessary re-creations and fix stale closure
+  const saveRecords = useCallback((newRecords: SimulatedRecord[]) => {
     setRecords(newRecords);
     try {
       localStorage.setItem('absensi_simulated_records_v2', JSON.stringify(newRecords));
@@ -679,7 +681,7 @@ export default function App() {
     } catch (e) {
       console.error(e);
     }
-  };
+  }, [records.length]);
 
   const handleSeedHistorical = () => {
     const historical = generateMonthlyMockData() as SimulatedRecord[];
